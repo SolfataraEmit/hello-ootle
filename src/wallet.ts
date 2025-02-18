@@ -29,7 +29,7 @@ import {
     props: SubmitTransactionProps
   ) {
     const { provider, account, builder, requiredSubstates } = props;
-    const fee = new Amount(2000);
+    const fee = new Amount(20000);
     const transaction = builder
       .feeTransactionPayFromComponent(account.address, fee.getStringValue())
       .build();

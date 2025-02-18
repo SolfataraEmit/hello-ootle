@@ -5,7 +5,9 @@ export async function createCounter(
     provider: TariProvider,
     counterTemplate: string,
   ) {
+    console.log("Getting account");
     const account = await provider.getAccount();
+    console.log("here2");
     const builder = new TransactionBuilder().callFunction(
       {
         templateAddress: counterTemplate,
@@ -13,12 +15,14 @@ export async function createCounter(
       },
       []
     );
+    console.log("here3");
     const result = await wallet.submitTransactionAndWaitForResult({
       provider,
       account,
       builder,
       requiredSubstates: [{ substate_id: account.address }],
     });
+    console.log("here4");
     return result;
   }
 
