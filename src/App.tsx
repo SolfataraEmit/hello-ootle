@@ -124,7 +124,7 @@ function App() {
         <a href="https://www.tari.com/" target="_blank">
           <img src={tariLogo} className="logo tari" alt="Tari logo" />
         </a>
-      </div>
+       </div>
       <h1>Hello Tari Ootle</h1>
       <TariConnectButton onConnected={handleOnConnected} />
       <div style={{ paddingLeft: "10px" }}>
